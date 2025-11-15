@@ -81,4 +81,4 @@ projeto-final/ ├── css/ │ └── style.css ├── js/ │ ├─�
 
 ##  Autor
 
-Desenvolvido por **Gilberto Krein Filho** - 2025.
+Desenvolvido por **Gilberto Krein** - 2025.
