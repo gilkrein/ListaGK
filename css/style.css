@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #F4F7F6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container 
+{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header 
+{
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 20px 0;
+    text-align: center;
+    background-image: URL('../assets/fundo-header.png');
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 
+{
+    margin-bottom: 10px;
+}
+
+nav button 
+{
+    background: none;
+    border: 1px solid #7F8C8D;
+    color: #ecf0f1;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover 
+{
+    background-color: #34495E;
+}
+
+nav button.active 
+{
+    background-color: #ECf0F1;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+main 
+{
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px RGBA(0,0,0,0.05);
+}
+
+section 
+{
+    padding: 20px;
+}
+
+footer 
+{
+    text-align: center;
+    margin-top: 30px;
+    color: #7F8C8D;
+    font-size: 0.9em;
+}
+
+.hidden 
+{
+    display: none;
+}
+
+#form-tarefa 
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#form-tarefa input[type="text"] 
+{
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #DDD;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+}
+
+#form-tarefa button 
+{
+    padding: 12px 20px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#form-tarefa button:hover 
+{
+    background-color: #2980B9;
+}
+
+.filtros 
+{
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filtros button 
+{
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filtros button.active 
+{
+    background: #34495E;
+    color: white;
+}
+
+#lista-tarefas, #lista-api 
+{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.tarefa-item 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #EEE;
+    transition: background-color 0.2s;
+}
+
+.tarefa-item:last-child 
+{
+    border-bottom: none;
+}
+
+.tarefa-item:hover 
+{
+    background-color: #F9F9F9;
+}
+
+.tarefa-item span 
+{
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.tarefa-item.concluida span 
+{
+    text-decoration: line-through;
+    color: #95A5A6;
+}
+
+.tarefa-item .botoes-tarefa 
+{
+    display: flex;
+    gap: 8px;
+}
+
+.tarefa-item .btn-excluir 
+{
+    background: #E74C3C;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.tarefa-item .btn-excluir:hover 
+{
+    background: #C0392B;
+}
+
+#btn-buscar-api 
+{
+    background-color: #2ECC71;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#btn-buscar-api:hover 
+{
+    background-color: #27AE60;
+}
+
+#lista-api li 
+{
+    padding: 10px;
+    background: #F9F9F9;
+    border-bottom: 1px solid #eee;
+}
+
+#lista-api li.concluida-api 
+{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+
+@media (max-width: 600px) 
+{
+    .container {
+        padding: 10px;
+    }
+
+    #form-tarefa 
+    {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #form-tarefa input[type="text"],
+    #form-tarefa button 
+    {
+        border-radius: 5px; 
+    }
+
+    .tarefa-item 
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .filtros 
+    {
+        flex-wrap: wrap;
+    }
+}
+
+.icone-acao 
+{
+    width: 20px;  
+    height: 20px; 
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.icone-acao:hover 
+{
+    opacity: 1.0;
+}
+
+.btn-toggle 
+{
+    margin-right: 12px;
+}
+
+.tarefa-item .btn-excluir 
+{
+    background: none;
+    padding: 0;
+}

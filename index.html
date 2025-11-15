@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gilberto Krein Filho"/>
+    <title>ListaGK - Organizador de tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>ListaGK</h1>
+            <nav>
+                <button id="nav-lista" class="active">Minha lista</button>
+                <button id="nav-api">Tarefas da web</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section id="secao-lista">
+                <h2>Minha lista</h2>
+                
+                <form id="form-tarefa">
+                    <input type="text" id="input-tarefa" placeholder="O que precisa ser feito?" required>
+                    <button type="submit">Adicionar</button>
+                </form>
+
+                <div class="filtros" id="filtros-lista">
+                    <button data-filtro="todas" class="active">Todas</button>
+                    <button data-filtro="pendentes">Pendentes</button>
+                    <button data-filtro="concluidas">Concluídas</button>
+                </div>
+
+                <ul id="lista-tarefas">
+                    </ul>
+            </section>
+
+            <section id="secao-api" class="hidden">
+                <h2>Tarefas de exemplo (API)</h2>
+                <p>Veja exemplos de tarefas buscadas do JSONPlaceholder.</p>
+                <button id="btn-buscar-api">Buscar tarefas</button>
+                
+                <ul id="lista-api">
+                    </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por <a>Gilberto Krein Filho</a> - 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/funcoes.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/main.js" defer></script> </body>
+</html>
